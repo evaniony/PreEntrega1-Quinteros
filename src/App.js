@@ -1,13 +1,18 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Header from './components/Header';
 import ItemListContainer from './components/ItemListContainer';
 
-
 const App = () => {
   return (
     <>
+    <BrowserRouter>
     <Header />
-    <ItemListContainer text="Tienda de Ceramica" />
+     <Routes>
+     <Route path='/' element={<ItemListContainer />}/>
+     <Route path='/category/:category' element={<ItemListContainer />}/>
+     </Routes>
+    </BrowserRouter>
     </>
   )
 }

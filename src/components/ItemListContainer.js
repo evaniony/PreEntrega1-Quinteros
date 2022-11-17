@@ -1,9 +1,10 @@
-const ItemListContainer = (props) =>{
+import Products from "../container/Products";
+
+const ItemListContainer = () =>{
     return(
         <>
-        <div>
-            {props.text}
-        </div>
+            <p>Tienda de Ceramica</p>
+            <Products />
         </>
     )
 }
